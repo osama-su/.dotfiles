@@ -2,7 +2,8 @@
 
 read -p "Enter IP address : " ip_address
 read -p "Enter Hostname : " host_name
-
+echo "You entered : "$ip_address $host_name
+read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
 matches_in_hosts="$(grep -n "^[^#]*${host_name}" /etc/hosts | cut -f1 -d:)"
 host_entry="${ip_address} ${host_name}"
