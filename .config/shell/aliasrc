@@ -52,3 +52,27 @@ lf="lfub" \
 magit="nvim -c MagitOnly" \
 ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+
+# Git
+alias \
+g="git" \
+gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" \
+gs="git status" \
+nah="git reset --hard;git clean -df" \
+wip="git add . && git commit -m 'wip'" \
+
+# Laravel Aliases
+alias pa='php artisan'
+alias pat="php artisan tinker"
+
+alias mc="php artisan make:controller"
+alias mrc="php artisan make:controller --resource "
+
+alias migrate="php artisan migrate"
+alias mfs="php artisan migrate:fresh --seed"
+
+# Composer
+alias cdo="composer dump-autoload -o"
+alias ci="composer install"
+alias co="composer outdated"
+alias cu="composer update"
