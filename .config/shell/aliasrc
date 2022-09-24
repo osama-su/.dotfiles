@@ -70,6 +70,8 @@ alias mrc="php artisan make:controller --resource "
 
 alias migrate="php artisan migrate"
 alias mfs="php artisan migrate:fresh --seed"
+# Sail 
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # Composer
 alias cdo="composer dump-autoload -o"
