@@ -1,5 +1,5 @@
 
-# my .dotfiles
+# my Arch Linux .dotfiles
 
 ## Setup
 ```sh
