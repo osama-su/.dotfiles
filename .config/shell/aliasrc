@@ -6,81 +6,59 @@
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
 
+[ -f "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC"
+
 # sudo not required for some system commands
 for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
-    alias $command="sudo $command"
+	alias $command="sudo $command"
 done; unset command
 
-se() { cd ~/.local/bin; $EDITOR $(fzf) ;}
+se() {
+	choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf)"
+	[ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice"
+	;}
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
-cp="cp -iv" \
-mv="mv -iv" \
-rm="rm -vI" \
-bc="bc -ql" \
-mkd="mkdir -pv" \
-yt="yt-dlp --embed-metadata -i" \
-yta="yt -x -f bestaudio/best" \
-ffmpeg="ffmpeg -hide_banner"
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	rsync="rsync -vrPlu" \
+	mkd="mkdir -pv" \
+	yt="yt-dlp --embed-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ytt="yt --skip-download --write-thumbnail" \
+	ffmpeg="ffmpeg -hide_banner"
 
 # Colorize commands when possible.
 alias \
-ls="ls -hN --color=auto --group-directories-first" \
-grep="grep --color=auto" \
-diff="diff --color=auto" \
-ccat="highlight --out-format=ansi" \
-ip="ip -color=auto"
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto"
+# Git Aliases
+alias \
+	config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 # These common commands are just too long! Abbreviate them.
 alias \
-ka="killall" \
-g="git" \
-trem="transmission-remote" \
-YT="youtube-viewer" \
-sdn="shutdown -h now" \
-e="$EDITOR" \
-v="$EDITOR" \
-p="pacman" \
-xi="sudo xbps-install" \
-xr="sudo xbps-remove -R" \
-xq="xbps-query" \
-z="zathura"
+	ka="killall" \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="pacman" \
+	xi="sudo xbps-install" \
+	xr="sudo xbps-remove -R" \
+	xq="xbps-query" \
+	z="zathura"
 
 alias \
-lf="lfub" \
-magit="nvim -c MagitOnly" \
-ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
-weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
-
-# Git
-alias \
-g="git" \
-gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" \
-gs="git status" \
-nah="git reset --hard;git clean -df" \
-wip="git add . && git commit -m 'wip'" \
-gc="git commit -m" \ # Commit with message
-gpush="git push -u origin $(git rev-parse --abbrev-ref HEAD)" \ # Push current branch to origin
-gpull="git pull --rebase origin $(git rev-parse --abbrev-ref HEAD)" \ # Pull current branch from origin
-gco="git checkout" \
-gcb="git checkout -b" \ # Create and checkout new branch
-
-
-# Laravel Aliases
-alias pa='php artisan'
-alias pat="php artisan tinker"
-
-alias mc="php artisan make:controller"
-alias mrc="php artisan make:controller --resource "
-
-alias migrate="php artisan migrate"
-alias mfs="php artisan migrate:fresh --seed"
-# Sail 
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-
-# Composer
-alias cdo="composer dump-autoload -o"
-alias ci="composer install"
-alias co="composer outdated"
-alias cu="composer update"
+	lf="lfub" \
+	magit="nvim -c MagitOnly" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
+	weath="less -S ${XDG_CACHE_HOME:-$HOME/.cache}/weatherreport" \
