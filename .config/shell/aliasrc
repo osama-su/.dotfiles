@@ -40,7 +40,8 @@ alias \
 	ip="ip -color=auto"
 # Git Aliases
 alias \
-	config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+	config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME' \
+	dotfiles="GIT_WORK_TREE=~ GIT_DIR=$HOME/.dotfiles/"
 
 # These common commands are just too long! Abbreviate them.
 alias \
