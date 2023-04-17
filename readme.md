@@ -28,3 +28,8 @@ config add .gitconfig
 config commit -m 'Add gitconfig'
 config push
 ```
+
+## Open in VSCode
+```sh
+dotfiles git code ~
+```
