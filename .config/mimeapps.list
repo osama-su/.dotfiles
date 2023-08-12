@@ -1,4 +1,22 @@
+
+[Added Associations]
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/geo=qwant-maps-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/mailto=org.kde.kmail2.desktop;
+x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
+
 [Default Applications]
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/geo=qwant-maps-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/mailto=org.kde.kmail2.desktop;
+x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
+x-scheme-handler/fleet=jetbrains-fleet.desktop
+x-scheme-handler/postman=Postman.desktop
 
 # xdg-open will use these settings to determine how to open filetypes.
 # These .desktop entries can also be seen and changed in ~/.local/share/applications/
