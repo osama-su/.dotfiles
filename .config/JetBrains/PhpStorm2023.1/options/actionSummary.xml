@@ -1,0 +1,67 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="ContextHelp">
+      <i c="1" l="1681002800334" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="1" l="1681003047865" />
+    </e>
+    <e n="EditorEnter">
+      <i c="1" l="1681003224042" />
+    </e>
+    <e n="Git.Log.Branches.Settings">
+      <i c="1" l="1681002897455" />
+    </e>
+    <e n="MoreRunToolbarActions">
+      <i c="1" l="1681003324766" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="1" l="1681003327024" />
+    </e>
+    <e n="ShowSettings">
+      <i c="1" l="1681003330122" />
+    </e>
+    <e n="Start.Use.Vcs">
+      <i c="1" l="1681002855620" />
+    </e>
+    <e n="Vcs.Log.Refresh">
+      <i c="1" l="1681002910080" />
+    </e>
+    <e n="Vcs.QuickListPopupAction">
+      <i c="4" l="1681003462717" />
+    </e>
+    <e n="Vcs.Show.Log">
+      <i c="1" l="1681003468371" />
+    </e>
+    <e n="Vcs.UpdateProject">
+      <i c="2" l="1681004082291" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1681002765998" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="1" l="1681003022750" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="18" l="1681004088590" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="5" l="1681004071810" />
+    </e>
+    <e n="com.intellij.toolWindow.MoreSquareStripeButton$Companion$createAction$1">
+      <i c="1" l="1681004068679" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="1" l="1681002786394" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$ShowOptionsAction">
+      <i c="2" l="1681003220869" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$AddButton">
+      <i c="2" l="1681003416067" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$RemoveButton">
+      <i c="2" l="1681003415415" />
+    </e>
+  </component>
+</application>
